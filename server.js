@@ -39,6 +39,7 @@ app.use(reset_password)
 
 //route to find incident 
 const find_incident=require('./routes/findIncident')
+app.use(find_incident)
 app.listen('4242',()=>{
   
     console.log( success('Server started Lisenting 🚀🚀🚀🚀')   )
