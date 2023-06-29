@@ -1,11 +1,12 @@
 const axios = require('axios');
+const {data}=require('./data')
 
 const reset_password=(req,res)=>{
-    if(req?.body?.user_password && req?.body?.sysId)
+    if(req?.body?.user_password && req?.params?.sysId)
 {
-    const   data=req.data
+    // const   data=req.data
         
-            const url = `https://${data.instance_name}.service-now.com/api/now/table/sys_user/${req.body.sysId}?sysparm_input_display_value=true`
+            const url = `https://${data.instance_name}.service-now.com/api/now/table/sys_user/${req.params.sysId}?sysparm_input_display_value=true`
             const headers = {
             'Content-Type': 'application/json',
             'Authorization': `${data.auth_type} ${data.auth_token}`

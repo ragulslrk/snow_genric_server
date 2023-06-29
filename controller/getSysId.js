@@ -1,15 +1,16 @@
 const axios = require('axios');
 const  chalk= require('chalk')
+const {data}=require('./data')
 const  error=chalk.red.bold.underline
 
 
 // route to get sysid of the given user
 const  getSysId=(req,res)=>{
-    const   data=req.data
+    console.log(data)
     const url = `https://${data.instance_name}.service-now.com/api/now/table/sys_user`;
     const params = {
       sysparm_limit: req.params.sysparm_limit,
-      user_name:req.params.userid
+      user_name:req.params.user_name
     
     };
     const headers = {
@@ -26,7 +27,7 @@ const  getSysId=(req,res)=>{
        //console.log(response.data);
         if(response?.data?.result?.length!=0 )
         {   console.log(`SysId :${chalk.hex('#c44aed').bold.underline(response.data.result[0].sys_id)}`)
-             res.json({sysId:response.data.result[0].sys_id})
+             res.send(response.data)
              
         }
         else{

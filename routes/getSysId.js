@@ -1,5 +1,5 @@
 const route= require('express').Router()
-const {gen_token,verify_token}=require('../controller/token_handler')
+//const {gen_token,verify_token}=require('../controller/token_handler')
 const {getSysId}=require('../controller/getSysId')
 const jwt = require('jsonwebtoken');
 const axios = require('axios');
@@ -14,6 +14,6 @@ const  error=chalk.red.bold.underline
     password 
 
 }*/
-route.get('/getSysId/:userid/:sysparm_limit/:token',verify_token,getSysId)
+route.get('/getSysId/:sysparm_limit/:user_name',getSysId)
 
 module.exports=route
