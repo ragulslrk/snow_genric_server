@@ -35,6 +35,10 @@ app.use(set_caller_id)
 //route reset the password 
 const reset_password=require('./routes/password_reset')
 app.use(reset_password)
+
+
+//route to find incident 
+const find_incident=require('./routes/findIncident')
 app.listen('4242',()=>{
   
     console.log( success('Server started Lisenting 🚀🚀🚀🚀')   )
