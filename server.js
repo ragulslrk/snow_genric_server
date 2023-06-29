@@ -10,7 +10,7 @@ const  success=chalk.green.bold.underline
 const  error=chalk.red.bold.underline
 
 //route to home  page
-route.get('/',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('this app contains SNOW Genric server')
 })
 
