@@ -2,7 +2,7 @@ const axios = require('axios');
 const {data}=require('./data')
 
 const  find_incident=(req,res)=>{
-    const url = `https://${data.instance_name}.service-now.com/api/now/table/incident? sysparm_query=${req.params.query}`;
+    const url = `https://${data.instance_name}.service-now.com/api/now/table/incident?sysparm_query=${req.params.query}`;
     
     const headers = {
       'Content-Type': 'application/json',
