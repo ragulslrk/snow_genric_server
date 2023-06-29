@@ -8,7 +8,7 @@ const  find_incident=(req,res)=>{
       'Content-Type': 'application/json',
       'Authorization': `${data.auth_type} ${data.auth_token}`
     };
-    
+    console.log(url)
     axios.get(url, {
       headers: headers
     })
