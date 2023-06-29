@@ -1,10 +1,11 @@
 const axios = require('axios');
+const {data}=require('./data')
 
 
 const  create_ticket=(req,res)=>{
-        if(req.body.short_description && req.body.description)
+        if(req.body.short_description && req.body.description &&req.body.impact && req.body.urgency)
         {
-            const   data=req.data
+            // const   data=req.data
         
             const url = `https://${data.instance_name}.service-now.com/api/now/table/incident?sysparm_display_value=true`;
             const headers = {
@@ -15,6 +16,8 @@ const  create_ticket=(req,res)=>{
             const post_data = {
               short_description: req.body.short_description,
               description: req.body.description,
+              urgency:req.body.urgency,
+              impact:req.body.impact
             
             };
     
