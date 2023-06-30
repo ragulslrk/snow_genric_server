@@ -20,7 +20,7 @@ const  create_ticket=(req,res)=>{
               impact:req.body.impact
             
             };
-    
+            console.log(post_data)
             axios.post(url, post_data, { headers })
               .then(response => {
                 res.send(response.data);
