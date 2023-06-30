@@ -15,9 +15,7 @@ app.get('/',(req,res)=>{
 })
 
 
-// route to  get jwt token
-const  get_jwt_token=require('./routes/get_jwt_token')
-app.use(get_jwt_token)
+
 
 //route  to get sysId 
 const get_sysId=require('./routes/getSysId')

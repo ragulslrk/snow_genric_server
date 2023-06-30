@@ -1,5 +1,4 @@
 const route= require('express').Router()
-//const {gen_token,verify_token}=require('../controller/token_handler')
 const {getSysId}=require('../controller/getSysId')
 const axios = require('axios');
 const  chalk= require('chalk')
