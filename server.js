@@ -11,7 +11,7 @@ const  error=chalk.red.bold.underline
 
 //route to home  page
 app.get('/',(req,res)=>{
-    res.send('this app contains SNOW Genric server')
+    res.send('this app contains SNOW Mphasis server')
 })
 
 
